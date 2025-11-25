@@ -6,7 +6,25 @@
         xmlns:local="clr-namespace:KonyvtarAvatkozas"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+	<Grid>
+		<TextBox HorizontalAlignment="Left" Margin="30,44,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="113" Height="36"/>
+		<TextBox HorizontalAlignment="Left" Margin="180,47,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="108" Height="40"/>
+		<Label Content="Delhaszn neve" HorizontalAlignment="Left" Margin="21,14,0,0" VerticalAlignment="Top"/>
+		<Label Content="korod" HorizontalAlignment="Left" Margin="174,15,0,0" VerticalAlignment="Top"/>
+		<StackPanel Margin="485,52,192,313">
+			<CheckBox Content="CheckBox"/>
+			<CheckBox Content="CheckBox"/>
+		</StackPanel>
+		<StackPanel Margin="658,52,33,301">
+			<RadioButton Content="RadioButton" RenderTransformOrigin="-0.827,-0.231"/>
+			<RadioButton Content="RadioButton"/>
+			<RadioButton Content="RadioButton"/>
+		</StackPanel>
+		<ComboBox HorizontalAlignment="Left" Margin="321,53,0,0" VerticalAlignment="Top" Width="120"/>
+		<Label Content="mufaj" HorizontalAlignment="Left" Margin="362,21,0,0" VerticalAlignment="Top"/>
+		<Label Content="hÍrlevél" HorizontalAlignment="Left" Margin="502,18,0,0" VerticalAlignment="Top" Width="76"/>
+		<Label Content="TaggSág" HorizontalAlignment="Left" Height="35" Margin="676,17,0,0" VerticalAlignment="Top" Width="65"/>
+		<Button Content="Mentés" HorizontalAlignment="Left" Margin="288,157,0,0" VerticalAlignment="Top" Height="200" Width="254" Background="#FF942FDE" FontSize="48"/>
 
-    </Grid>
+	</Grid>
 </Window>
