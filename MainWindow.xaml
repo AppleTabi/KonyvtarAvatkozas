@@ -1,30 +1,46 @@
 ﻿<Window x:Class="KonyvtarAvatkozas.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:KonyvtarAvatkozas"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-	<Grid>
-		<TextBox HorizontalAlignment="Left" Margin="30,44,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="113" Height="36"/>
-		<TextBox HorizontalAlignment="Left" Margin="180,47,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="108" Height="40"/>
-		<Label Content="Delhaszn neve" HorizontalAlignment="Left" Margin="21,14,0,0" VerticalAlignment="Top"/>
-		<Label Content="korod" HorizontalAlignment="Left" Margin="174,15,0,0" VerticalAlignment="Top"/>
-		<StackPanel Margin="485,52,192,313">
-			<CheckBox Content="CheckBox"/>
-			<CheckBox Content="CheckBox"/>
-		</StackPanel>
-		<StackPanel Margin="658,52,33,301">
-			<RadioButton Content="RadioButton" RenderTransformOrigin="-0.827,-0.231"/>
-			<RadioButton Content="RadioButton"/>
-			<RadioButton Content="RadioButton"/>
-		</StackPanel>
-		<ComboBox HorizontalAlignment="Left" Margin="321,53,0,0" VerticalAlignment="Top" Width="120"/>
-		<Label Content="mufaj" HorizontalAlignment="Left" Margin="362,21,0,0" VerticalAlignment="Top"/>
-		<Label Content="hÍrlevél" HorizontalAlignment="Left" Margin="502,18,0,0" VerticalAlignment="Top" Width="76"/>
-		<Label Content="TaggSág" HorizontalAlignment="Left" Height="35" Margin="676,17,0,0" VerticalAlignment="Top" Width="65"/>
-		<Button Content="Mentés" HorizontalAlignment="Left" Margin="288,157,0,0" VerticalAlignment="Top" Height="200" Width="254" Background="#FF942FDE" FontSize="48"/>
+        Title="Olvasó regisztráció" Height="480" Width="800">
+	<Grid Margin="10">
+		<Label Content="Felhasználó neve:" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top"/>
+		<TextBox x:Name="nevTextBox" HorizontalAlignment="Left" Margin="20,50,0,0" VerticalAlignment="Top" Width="200"/>
 
+		<Label Content="Életkor:" HorizontalAlignment="Left" Margin="250,20,0,0" VerticalAlignment="Top"/>
+		<TextBox x:Name="eletkorTextBox" HorizontalAlignment="Left" Margin="250,50,0,0" VerticalAlignment="Top" Width="80" PreviewTextInput="EletkorTextBox_PreviewTextInput"/>
+
+		<Label Content="Műfaj:" HorizontalAlignment="Left" Margin="370,20,0,0" VerticalAlignment="Top"/>
+		<ComboBox x:Name="mufajComboBox" HorizontalAlignment="Left" Margin="370,50,0,0" VerticalAlignment="Top" Width="120">
+			<ComboBoxItem>Regény</ComboBoxItem>
+			<ComboBoxItem>Sci-fi</ComboBoxItem>
+			<ComboBoxItem>Fantasy</ComboBoxItem>
+			<ComboBoxItem>Ismeretterjesztő</ComboBoxItem>
+			<ComboBoxItem>Mese</ComboBoxItem>
+		</ComboBox>
+
+		<Label Content="Értesítések:" HorizontalAlignment="Left" Margin="520,20,0,0" VerticalAlignment="Top"/>
+		<StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="520,50,0,0" VerticalAlignment="Top">
+			<CheckBox x:Name="hirlevelCheckBox" Content="Hírlevél feliratkozás"/>
+			<CheckBox x:Name="smsCheckBox" Content="SMS értesítés"/>
+		</StackPanel>
+
+		<Label Content="Tagsági típus:" HorizontalAlignment="Left" Margin="670,20,0,0" VerticalAlignment="Top"/>
+		<StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="670,50,0,0" VerticalAlignment="Top">
+			<RadioButton x:Name="normalRadio" Content="Normál" GroupName="tagsag" IsChecked="True"/>
+			<RadioButton x:Name="diakRadio" Content="Diák" GroupName="tagsag"/>
+			<RadioButton x:Name="nyugdijasRadio" Content="Nyugdíjas" GroupName="tagsag"/>
+		</StackPanel>
+
+		<Button x:Name="mentesButton" Content="Mentés" FontSize="24"
+                Width="200" Height="60"
+                HorizontalAlignment="Left" Margin="20,130,0,0" VerticalAlignment="Top"
+                Click="mentesButton_Click"
+                Background="#FF942FDE"/>
+
+		<TextBlock x:Name="visszajelzesTextBlock" Foreground="Green" FontWeight="Bold"
+                   HorizontalAlignment="Left" Margin="250,135,0,0" VerticalAlignment="Top" Width="400"/>
+
+		<Label Content="Regisztrált olvasók:" HorizontalAlignment="Left" Margin="20,220,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+		<ListBox x:Name="olvasokListBox" HorizontalAlignment="Left" Margin="20,250,0,0" VerticalAlignment="Top" Width="750" Height="160"/>
 	</Grid>
 </Window>
