@@ -41,6 +41,6 @@
                    HorizontalAlignment="Left" Margin="250,135,0,0" VerticalAlignment="Top" Width="400"/>
 
 		<Label Content="Regisztrált olvasók:" HorizontalAlignment="Left" Margin="20,220,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-		<ListBox x:Name="olvasokListBox" HorizontalAlignment="Left" Margin="20,250,0,0" VerticalAlignment="Top" Width="750" Height="160"/>
+		<ListBox x:Name="olvasokListBox" HorizontalAlignment="Left" Margin="20,250,0,0" VerticalAlignment="Top" Width="734" Height="160"/>
 	</Grid>
 </Window>
